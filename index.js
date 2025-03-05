@@ -24,9 +24,6 @@ const fareDoubler = (value) => value * 2;
 const fareTripler = (value)=> value * 3;
 
 function selectDifferentDrivers(drivers, functionPassed){
-    if(functionPassed === returnFirstTwoDrivers){
-        return drivers.slice(0, 2)
-    }else{
-        return drivers.slice(-2);
-    }
+    return functionPassed(drivers);
+    
 }
